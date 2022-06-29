@@ -26,7 +26,7 @@ pipeline {
         // One or more steps need to be included within each condition's block.
         emailext body: '${FILE,path="email.html"}',
                  subject: '构建通知:${PROJECT_NAME} - 第${BUILD_NUMBER}次构建${BUILD_STATUS}',
-                 to: '18164333905@163.com'
+                 to: '18326895933@163.com'
       }
     }
 }
