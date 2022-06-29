@@ -20,7 +20,13 @@ pipeline {
 /opt/test_jar_shell/lyk_pipeline_shell.sh''', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '/opt/test_jar', remoteDirectorySDF: false, removePrefix: 'target', sourceFiles: 'target/lyk_pipeline_maven-0.0.1-SNAPSHOT.jar')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
             }
         }
-
-
+    }
+    post {
+      always {
+        // One or more steps need to be included within each condition's block.
+        emailext body: '${FILE,path="email.html"}',
+                 subject: '构建通知:${PROJECT_NAME} - 第${BUILD_NUMBER}次构建${BUILD_STATUS}',
+                 to: '18164333905@163.com'
+      }
     }
 }
