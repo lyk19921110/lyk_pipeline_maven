@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('pull form git') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'ca617273-88f2-44c0-9bed-63ea9ac93fa8', url: 'git@github.com:lyk19921110/lyk_pipeline_maven.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/${branch}']], extensions: [], userRemoteConfigs: [[credentialsId: 'ca617273-88f2-44c0-9bed-63ea9ac93fa8', url: 'git@github.com:lyk19921110/lyk_pipeline_maven.git']]])
             }
         }
 
