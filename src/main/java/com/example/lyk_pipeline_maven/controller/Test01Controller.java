@@ -17,4 +17,11 @@ public class Test01Controller {
         map.put("login","lyk_pipeline_mave");
         return map;
     }
+
+    @RequestMapping("/method02")
+    public Map get2(){
+        Map map=new HashMap();
+        map.put("login","lyk_pipeline_mave v2分支");
+        return map;
+    }
 }
