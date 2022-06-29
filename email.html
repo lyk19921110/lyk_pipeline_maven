@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>${ENV,var="JOB_NAME"}-第${BUILD_NUMBER}次构建日志</title>
+</head>
+<body>
+   <h1>构建结果：${BUILD_STATUS}</h1>
+   <h1>项目名称:${PROJECT_NAME}</h1>
+   <h1>构建编号：第${BUILD_NUMBER}次构建</h1>
+   <h1>触发原因:${CAUSE}</h1>
+   <h1>构建日志:<a href="${BUILD_URL}console">${BUILD_URL}console</a></h1>
+   <h1>构建URL:<a href="${BUILD_URL}">${BUILD_URL}</a></h1>
+   <h1>工作目录：<a href="${PROJECT_URL}">${PROJECT_URL}ws</a></h1>
+    <h1>项目url:<a href="${PROJECT_URL}">${PROJECT_URL}</a></h1>
+</body>
+</html>
